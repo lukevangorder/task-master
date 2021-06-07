@@ -4,9 +4,6 @@ export default class TaskBoard extends Component {
 
     constructor(props){
         super()
-        this.state = {
-            test: props.test
-        }
     }
 
     render() {
