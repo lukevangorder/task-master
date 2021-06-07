@@ -7,9 +7,9 @@ export default class TaskBoard extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
-            <div onClick={() => {this.props.increment()}}> {this.props.test}</div>
+            <div onClick={() => {this.props.increment(Math.random() * (10 - 1) +1)}}> 1   
+            </div>
         )
     }
 }

@@ -11,9 +11,10 @@ function App() {
   );
 }
 
-function increment(){
+function increment(task){
   return {
-    type: 'INCREMENT',
+    type: 'ADD_TASK',
+    newTask: task
 }
 }
 
@@ -23,7 +24,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    increment: () => dispatch(increment()),
+    increment: (task) => dispatch(increment(task)),
   };
 };
 

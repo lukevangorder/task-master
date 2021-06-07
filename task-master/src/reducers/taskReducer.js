@@ -1,13 +1,16 @@
 import { createStore } from 'redux';
 
 const initialState = {
-    test: 2
+    tasks: []
 }
 
 export default function taskReducer(state = initialState, action) {
     switch (action.type) {
-        case 'INCREMENT':
-            return { test: state.test + 1 }
+        case 'ADD_TASK':
+            state.tasks.push(action.newTask)
+            return {
+                ...state,
+            }
             break
         default:
           return state
