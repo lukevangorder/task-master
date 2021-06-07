@@ -9,10 +9,15 @@ export default class TaskBoard extends Component {
         }
     }
 
+    handleClick = () => {
+        
+    }
+
     render() {
         return (
             <div class='taskBoard'>
-                <h3 style={{float: 'right'}} onClick >+</h3>
+                <h3 style={{float: 'right'}} onClick={this.handleClick} >+</h3>
+                <ul></ul>
             </div>
         )
     }
