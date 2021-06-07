@@ -11,10 +11,23 @@ function App() {
   );
 }
 
+function increment(){
+  return {
+    type: 'INCREMENT',
+}
+}
+
 const mapStateToProps = (state) => {
   return { test: state.test };
 };
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    increment: () => dispatch(increment()),
+  };
+};
+
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(TaskBoard); 

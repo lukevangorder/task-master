@@ -10,8 +10,9 @@ export default class TaskBoard extends Component {
     }
 
     render() {
+        console.log(this.props)
         return (
-            <div>{this.state.test}</div>
+            <div onClick={() => {this.props.increment()}}> {this.props.test}</div>
         )
     }
 }
