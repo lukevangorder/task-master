@@ -8,7 +8,7 @@ export default class NewTask extends Component {
 
     render() {
         return (
-            <li><input type='text'></input></li>
+            <li><form><input type='text' name='new-task'></input></form></li>
         )
     }
 }
