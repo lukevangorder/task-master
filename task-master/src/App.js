@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <TaskBoard />
     </div>
   );
@@ -19,7 +19,7 @@ function addTask(task){
 }
 
 const mapStateToProps = (state) => {
-  return { test: state.test };
+  return { tasks: state.tasks };
 };
 
 const mapDispatchToProps = (dispatch) => {

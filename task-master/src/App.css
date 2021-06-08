@@ -1,6 +1,13 @@
 .taskBoard {
     position: absolute;
-    width: 10%;
+    width: 20%;
     height: 50%;
     background-color: lightblue;
+}
+
+.app {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    top: 10%
 }
