@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Task from './task.js';
-import NewTask from './newTask.js';
 
 export default class TaskBoard extends Component {
 
@@ -15,7 +14,6 @@ export default class TaskBoard extends Component {
         this.setState({
             addClicked: true
         })
-        // this.props.addTask(task)
     }
 
     handleNewTask = event => {
@@ -31,7 +29,6 @@ export default class TaskBoard extends Component {
     }
 
     render() {
-        console.log(this.props.tasks)
         const taskLis = [];
         for(let i=0; i<this.props.tasks.length; i++){
             taskLis.push(<Task key={i} text={this.props.tasks[i]}/>)
@@ -43,7 +40,6 @@ export default class TaskBoard extends Component {
                     {taskLis}
                     {this.state.addClicked?
                     <li><form><input type='text' name='new-task' onKeyPress={this.handleNewTask.bind(this)}></input></form></li>
-                    // <NewTask updateStore={this.handleStoreUpdate()}/> 
                     : <div></div>}
                 </ul>
             </div>
