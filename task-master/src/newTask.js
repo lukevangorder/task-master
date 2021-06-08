@@ -8,7 +8,7 @@ export default class NewTask extends Component {
 
     render() {
         return (
-            <li>{this.state.text}</li>
+            <li><input type='text'></input></li>
         )
     }
 }
