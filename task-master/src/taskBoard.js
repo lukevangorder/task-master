@@ -19,6 +19,7 @@ export default class TaskBoard extends Component {
     }
 
     handleNewTask = event => {
+        event.preventDefault();
         const code = event.keyCode || event.which;
         if(code === 13) {
             this.props.addTask(event.target.value)
