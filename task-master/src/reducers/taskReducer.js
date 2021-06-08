@@ -5,7 +5,7 @@ const initialState = {
 export default function taskReducer(state = initialState, action) {
     switch (action.type) {
         case 'ADD_TASK':
-            return {tasks: state.tasks.concat(action.newTask)}
+            return {...state, tasks: state.tasks.concat(action.newTask)}
         default:
           return state
     }
